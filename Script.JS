@@ -161,3 +161,146 @@ const observer = new IntersectionObserver(
 sections.forEach((section) => {
   observer.observe(section);
 });
+
+
+/* =====================================================
+   ABOUT SECTION SETTINGS
+   ===================================================== */
+
+const ABOUT_CONFIG = {
+
+  // ---------------------------------------------------
+  // IMAGES
+  // ---------------------------------------------------
+
+  mainImage: "assets/artist-main.jpg",
+
+  photo1: "assets/artist-photo-1.jpg",
+
+  photo2: "assets/artist-photo-2.jpg",
+
+
+  // ---------------------------------------------------
+  // HEADING
+  // ---------------------------------------------------
+
+  heading: `
+    WORDS<br>
+    PEOPLE<br>
+    AND PLACES
+  `,
+
+
+  // ---------------------------------------------------
+  // PARAGRAPHS
+  // ---------------------------------------------------
+
+  paragraph1: `
+    Imroz Khan is a live performance artist, working across
+    spoken word, poetry, storytelling and ghazals. A law student
+    who commands narratives both in the courtroom and on stage,
+    he is known for sharp wit, impeccable comic timing, and
+    powerful social commentary expressed through Hindi, Urdu,
+    Marathi and English.
+  `,
+
+  paragraph2: `
+    With 3+ years of active performance experience, he has
+    performed at leading platforms across the country, curated
+    cultural spaces, written for theatre, and continues to explore
+    new ways of using words to question, connect and create
+    conversations.
+  `,
+
+
+  // ---------------------------------------------------
+  // STATISTICS
+  // ---------------------------------------------------
+
+  stat1Number: "3+",
+  stat1Label: `
+    YEARS<br>
+    PERFORMING LIVE
+  `,
+
+  stat2Number: "20+",
+  stat2Label: `
+    PLATFORMS<br>
+    &amp; EVENTS
+  `,
+
+  stat3Number: "MULTI",
+  stat3Label: `
+    LANGUAGE<br>
+    PERFORMER
+  `,
+
+  stat4Number: "1000+",
+  stat4Label: `
+    AUDIENCE<br>
+    CONVERSATIONS
+  `
+
+};
+
+
+/* =====================================================
+   APPLY ABOUT SETTINGS
+   ===================================================== */
+
+
+// Images
+
+document.getElementById("aboutMainImage").src =
+  ABOUT_CONFIG.mainImage;
+
+document.getElementById("aboutPhoto1").src =
+  ABOUT_CONFIG.photo1;
+
+document.getElementById("aboutPhoto2").src =
+  ABOUT_CONFIG.photo2;
+
+
+// Heading
+
+document.getElementById("aboutHeading").innerHTML =
+  ABOUT_CONFIG.heading;
+
+
+// Paragraphs
+
+document.getElementById("aboutParagraph1").innerHTML =
+  ABOUT_CONFIG.paragraph1;
+
+document.getElementById("aboutParagraph2").innerHTML =
+  ABOUT_CONFIG.paragraph2;
+
+
+// Statistics
+
+document.getElementById("stat1Number").textContent =
+  ABOUT_CONFIG.stat1Number;
+
+document.getElementById("stat1Label").innerHTML =
+  ABOUT_CONFIG.stat1Label;
+
+
+document.getElementById("stat2Number").textContent =
+  ABOUT_CONFIG.stat2Number;
+
+document.getElementById("stat2Label").innerHTML =
+  ABOUT_CONFIG.stat2Label;
+
+
+document.getElementById("stat3Number").textContent =
+  ABOUT_CONFIG.stat3Number;
+
+document.getElementById("stat3Label").innerHTML =
+  ABOUT_CONFIG.stat3Label;
+
+
+document.getElementById("stat4Number").textContent =
+  ABOUT_CONFIG.stat4Number;
+
+document.getElementById("stat4Label").innerHTML =
+  ABOUT_CONFIG.stat4Label;
