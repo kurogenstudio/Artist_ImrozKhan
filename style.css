@@ -520,4 +520,461 @@ h1 {
   .secondary-button {
     width: max-content;
   }
+
+/* =====================================================
+   ABOUT SECTION
+   ===================================================== */
+
+.about-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 70px 5vw 65px;
+  overflow: hidden;
+
+  display: grid;
+  grid-template-columns:
+    minmax(300px, 36%)
+    minmax(450px, 1fr)
+    minmax(280px, 27%);
+
+  column-gap: 4vw;
+  align-items: center;
+
+  background:
+    radial-gradient(
+      circle at 15% 30%,
+      rgba(119, 78, 39, .32),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 80% 10%,
+      rgba(82, 53, 29, .16),
+      transparent 25%
+    ),
+    #070706;
+
+  color: #eee7d6;
+}
+
+
+/* -----------------------------------------------------
+   MAIN LEFT IMAGE
+   ----------------------------------------------------- */
+
+.about-main-image {
+  position: relative;
+  align-self: stretch;
+  min-height: 720px;
+  overflow: hidden;
+}
+
+.about-main-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,.1),
+      rgba(0,0,0,.08)
+    );
+
+  pointer-events: none;
+}
+
+.about-main-image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  filter:
+    saturate(.78)
+    contrast(1.08)
+    brightness(.82);
+}
+
+
+/* -----------------------------------------------------
+   CENTER CONTENT
+   ----------------------------------------------------- */
+
+.about-content {
+  position: relative;
+  z-index: 3;
+
+  align-self: center;
+  max-width: 650px;
+}
+
+
+.about-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  margin-bottom: 27px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 14px;
+  letter-spacing: .24em;
+
+  color: #c49b6c;
+}
+
+
+.about-label-line {
+  width: 135px;
+  height: 1px;
+  background: rgba(196,155,108,.7);
+}
+
+
+.about-content h2 {
+  margin: 0 0 25px;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(65px, 6.3vw, 110px);
+  line-height: .84;
+  letter-spacing: -.065em;
+  font-weight: 800;
+
+  color: #eee7d6;
+
+  text-transform: uppercase;
+}
+
+
+.about-copy {
+  max-width: 650px;
+}
+
+
+.about-copy p {
+  margin: 0 0 27px;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(18px, 1.35vw, 23px);
+  line-height: 1.16;
+
+  color: rgba(238,231,214,.95);
+}
+
+
+/* -----------------------------------------------------
+   STATS
+   ----------------------------------------------------- */
+
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 34px;
+
+  border-top: 1px solid rgba(196,155,108,.5);
+}
+
+
+.stat {
+  min-height: 112px;
+
+  padding: 14px 18px 0 0;
+
+  border-right: 1px solid rgba(196,155,108,.45);
+}
+
+
+.stat:not(:first-child) {
+  padding-left: 25px;
+}
+
+
+.stat:last-child {
+  border-right: none;
+}
+
+
+.stat strong {
+  display: block;
+
+  font-family: "Inter", sans-serif;
+  font-size: clamp(30px, 2.8vw, 49px);
+  line-height: .95;
+  letter-spacing: -.04em;
+
+  color: #d9ad79;
+}
+
+
+.stat span {
+  display: block;
+
+  margin-top: 13px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  line-height: 1.35;
+  letter-spacing: .15em;
+
+  color: rgba(238,231,214,.88);
+}
+
+
+/* -----------------------------------------------------
+   RIGHT PHOTO COLLAGE
+   ----------------------------------------------------- */
+
+.about-collage {
+  position: relative;
+  height: 650px;
+
+  align-self: center;
+}
+
+
+.photo {
+  position: absolute;
+
+  overflow: hidden;
+
+  background: #111;
+
+  border: 1px solid rgba(238,231,214,.5);
+
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.45);
+}
+
+
+.photo img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  filter:
+    grayscale(1)
+    contrast(1.15)
+    brightness(.75);
+}
+
+
+/* Top/right photograph */
+
+.photo-one {
+  width: 90%;
+  height: 62%;
+
+  top: 0;
+  right: 0;
+
+  transform: rotate(-3deg);
+}
+
+
+.photo-one img {
+  object-position: center;
+}
+
+
+/* Bottom/right photograph */
+
+.photo-two {
+  width: 65%;
+  height: 45%;
+
+  right: -3%;
+  bottom: 3%;
+
+  transform: rotate(3deg);
+
+  border-color: rgba(238,231,214,.65);
+}
+
+
+.photo-two img {
+  object-position: center;
+}
+
+
+/* Film-strip text */
+
+.film-text {
+  position: absolute;
+
+  left: 8px;
+  top: 8px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: .13em;
+
+  color: rgba(238,231,214,.8);
+
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+
+.film-number {
+  position: absolute;
+
+  left: 9px;
+  bottom: 15px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+
+  color: rgba(238,231,214,.75);
+}
+
+
+/* -----------------------------------------------------
+   HANDWRITTEN TEXT
+   ----------------------------------------------------- */
+
+.about-scribble {
+  position: absolute;
+
+  z-index: 5;
+
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(20px, 1.55vw, 29px);
+  font-style: italic;
+  line-height: 1.03;
+
+  color: rgba(150,126,94,.88);
+
+  pointer-events: none;
+}
+
+
+.about-scribble-left {
+  top: 9%;
+  left: 3.5vw;
+
+  transform: rotate(-4deg);
+}
+
+
+.about-scribble-right {
+  right: 4vw;
+  bottom: 8%;
+
+  transform: rotate(-3deg);
+
+  color: rgba(175,171,161,.75);
+}
+
+
+.scribble-underline {
+  display: block;
+
+  width: 80px;
+  height: 15px;
+
+  margin-top: 8px;
+
+  border-top: 3px solid currentColor;
+  border-radius: 50%;
+
+  transform: rotate(-7deg);
+}
+
+
+/* -----------------------------------------------------
+   MOBILE
+   ----------------------------------------------------- */
+
+@media (max-width: 1100px) {
+
+  .about-section {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 35px;
+  }
+
+  .about-main-image {
+    min-height: 700px;
+  }
+
+  .about-collage {
+    display: none;
+  }
+
+  .about-content h2 {
+    font-size: clamp(60px, 8vw, 95px);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .about-section {
+    min-height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 80px 7vw;
+  }
+
+
+  .about-main-image {
+    width: 100%;
+    height: 500px;
+    min-height: 0;
+
+    order: 2;
+  }
+
+
+  .about-content {
+    width: 100%;
+    order: 1;
+  }
+
+
+  .about-content h2 {
+    font-size: 18vw;
+  }
+
+
+  .about-copy p {
+    font-size: 20px;
+  }
+
+
+  .about-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+
+  .stat {
+    border-bottom: 1px solid rgba(196,155,108,.35);
+  }
+
+
+  .stat:nth-child(2) {
+    border-right: none;
+  }
+
+
+  .about-scribble-left {
+    display: none;
+  }
+
+
+  .about-scribble-right {
+    display: none;
+  }
+
+}
+   
 }
